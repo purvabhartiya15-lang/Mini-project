@@ -207,59 +207,59 @@ public:
     }
 };
 
-int main() {
-    DashboardManager dashboard;
+// int main() {
+//     DashboardManager dashboard;
     
-    // --- DUMMY DATA FOR TESTING THE UI ---
-    vector<string> testIn = {"MH12EM0001", "MH12VIP002", "FREE", "FREE", "FREE", "FREE", "FREE"};
-    dashboard.updateCarSlots(testIn);
-    dashboard.updateBikes(145);
+//     // --- DUMMY DATA FOR TESTING THE UI ---
+//     vector<string> testIn = {"MH12EM0001", "MH12VIP002", "FREE", "FREE", "FREE", "FREE", "FREE"};
+//     dashboard.updateCarSlots(testIn);
+//     dashboard.updateBikes(145);
     
-    priority_queue<Vehicle, vector<Vehicle>, WaitlistCompare> testQ;
-    // We use time(0) to simulate real-world arrival times for the queue
-    testQ.push({"MH12AA0001", "Car", REGULAR, time(0) + 1});
-    testQ.push({"MH12EM9999", "Car", EMERGENCY, time(0)});
-    dashboard.updateWaitlist(testQ);
-    // -------------------------------------
+//     priority_queue<Vehicle, vector<Vehicle>, WaitlistCompare> testQ;
+//     // We use time(0) to simulate real-world arrival times for the queue
+//     testQ.push({"MH12AA0001", "Car", REGULAR, time(0) + 1});
+//     testQ.push({"MH12EM9999", "Car", EMERGENCY, time(0)});
+//     dashboard.updateWaitlist(testQ);
+//     // -------------------------------------
 
-    int choice;
-    do {
-        cout << CYAN << "\n[ MAIN MENU ]\n" << RESET;
-        cout << "1. View Live Dashboard\n";
-        cout << "2. Simulate Vehicle Entry (Save to CSV)\n";
-        cout << "3. View Entry Analytics\n";
-        cout << "4. Exit System\n";
-        cout << "Enter choice: ";
-        cin >> choice;
+//     int choice;
+//     do {
+//         cout << CYAN << "\n[ MAIN MENU ]\n" << RESET;
+//         cout << "1. View Live Dashboard\n";
+//         cout << "2. Simulate Vehicle Entry (Save to CSV)\n";
+//         cout << "3. View Entry Analytics\n";
+//         cout << "4. Exit System\n";
+//         cout << "Enter choice: ";
+//         cin >> choice;
         
-        if (choice == 1) {
-            dashboard.renderLiveDashboard();
-        } 
-        else if (choice == 2) {
-            Vehicle v;
-            int catInput;
+//         if (choice == 1) {
+//             dashboard.renderLiveDashboard();
+//         } 
+//         else if (choice == 2) {
+//             Vehicle v;
+//             int catInput;
             
-            cout << "\n--- RECORD VEHICLE ENTRY ---\n";
-            cout << "Enter Vehicle ID (e.g., MH12XY1234): ";
-            cin >> v.id;
-            cout << "Enter Type (Car/Bike): ";
-            cin >> v.type;
-            cout << "Enter Category (1=Emergency, 2=VIP, 3=Regular): ";
-            cin >> catInput;
+//             cout << "\n--- RECORD VEHICLE ENTRY ---\n";
+//             cout << "Enter Vehicle ID (e.g., MH12XY1234): ";
+//             cin >> v.id;
+//             cout << "Enter Type (Car/Bike): ";
+//             cin >> v.type;
+//             cout << "Enter Category (1=Emergency, 2=VIP, 3=Regular): ";
+//             cin >> catInput;
             
-            if (catInput == 1) v.category = EMERGENCY;
-            else if (catInput == 2) v.category = VIP;
-            else v.category = REGULAR;
+//             if (catInput == 1) v.category = EMERGENCY;
+//             else if (catInput == 2) v.category = VIP;
+//             else v.category = REGULAR;
             
-            v.entryTime = time(0); // Captures the exact current computer time
+//             v.entryTime = time(0); // Captures the exact current computer time
             
-            dashboard.logEntryToCSV(v);
-        }
-        else if (choice == 3) {
-            dashboard.generateAnalyticsReport();
-        }
+//             dashboard.logEntryToCSV(v);
+//         }
+//         else if (choice == 3) {
+//             dashboard.generateAnalyticsReport();
+//         }
         
-    } while (choice != 4);
+//     } while (choice != 4);
 
-    return 0;
-}
+//     return 0;
+// }

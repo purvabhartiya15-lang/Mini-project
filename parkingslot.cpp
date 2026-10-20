@@ -108,53 +108,53 @@ class park{
     }
    }
 };
-int main() {
-    park p;
-    int choice;
+// int main() {
+//     park p;
+//     int choice;
 
-    do {
-        cout << "\n===== PARKING MANAGEMENT SYSTEM =====\n";
-        cout << "1. Park Vehicle\n";
-        cout << "2. Remove Vehicle\n";
-        cout << "3. Display Parking Slots\n";
-        cout << "4. Display Available Slots\n";
-        cout << "5. Search Vehicle\n";
-        cout << "6. Display Occupancy Report\n";
-        cout << "7. Display Waiting Queue\n";
-        cout << "8. Exit\n";
+//     do {
+//         cout << "\n===== PARKING MANAGEMENT SYSTEM =====\n";
+//         cout << "1. Park Vehicle\n";
+//         cout << "2. Remove Vehicle\n";
+//         cout << "3. Display Parking Slots\n";
+//         cout << "4. Display Available Slots\n";
+//         cout << "5. Search Vehicle\n";
+//         cout << "6. Display Occupancy Report\n";
+//         cout << "7. Display Waiting Queue\n";
+//         cout << "8. Exit\n";
 
-        cout << "Enter choice: ";
-        cin >> choice;
+//         cout << "Enter choice: ";
+//         cin >> choice;
 
-        switch (choice) {
-            case 1:
-                p.parking();
-                break;
-            case 2:
-                p.remove();
-                break;
-            case 3:
-                p.displayParkingSlots();
-                break;
-            case 4:
-                p.displayAvailableSlots();
-                break;
-            case 5:
-                p.searchVehicle();
-                break;
-            // case 6:
-            //     p.displayOccupancyReport();
-            //     break;
-            // case 7:
-            //     p.displayWaitingQueue();
-            //     break;
-            case 6:
-                cout << "Exiting...\n";
-                break;
-            default:
-                cout << "Invalid choice!\n";
-        }
-    } while (choice != 8);
+//         switch (choice) {
+//             case 1:
+//                 p.parking();
+//                 break;
+//             case 2:
+//                 p.remove();
+//                 break;
+//             case 3:
+//                 p.displayParkingSlots();
+//                 break;
+//             case 4:
+//                 p.displayAvailableSlots();
+//                 break;
+//             case 5:
+//                 p.searchVehicle();
+//                 break;
+//             // case 6:
+//             //     p.displayOccupancyReport();
+//             //     break;
+//             // case 7:
+//             //     p.displayWaitingQueue();
+//             //     break;
+//             case 6:
+//                 cout << "Exiting...\n";
+//                 break;
+//             default:
+//                 cout << "Invalid choice!\n";
+//         }
+//     } while (choice != 8);
 
-    return 0;
-}
+//     return 0;
+// }
